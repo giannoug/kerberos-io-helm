@@ -11,5 +11,8 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+    - port: 8889
+      targetPort: 8889
+      name: livestream
   selector:
     {{- include "kerberos-io.selectorLabels" . | nindent 4 }}
